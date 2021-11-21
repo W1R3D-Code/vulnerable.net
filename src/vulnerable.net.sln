@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vulnerable.MVC", "Vulnerable.MVC\Vulnerable.MVC.csproj", "{3DCB86E3-43E0-4602-8B50-6A69B19525ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vulnerable.Common", "Vulnerable.Common\Vulnerable.Common.csproj", "{29703529-4042-41D6-8CF0-57844596884C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DCB86E3-43E0-4602-8B50-6A69B19525ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DCB86E3-43E0-4602-8B50-6A69B19525ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DCB86E3-43E0-4602-8B50-6A69B19525ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DCB86E3-43E0-4602-8B50-6A69B19525ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29703529-4042-41D6-8CF0-57844596884C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29703529-4042-41D6-8CF0-57844596884C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29703529-4042-41D6-8CF0-57844596884C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29703529-4042-41D6-8CF0-57844596884C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E3A1534-EEFC-4D4D-9BE4-27B1A090B61C}
+	EndGlobalSection
+EndGlobal

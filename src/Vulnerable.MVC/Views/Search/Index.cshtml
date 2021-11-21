@@ -1,0 +1,16 @@
+﻿@model string
+
+@{
+    ViewData["Title"] = "Search";
+
+    // This is an example of why it bad to output raw user input
+}
+
+<div class="text-center">
+    <h1 class="display-4">Search</h1>
+    <div class="search-results">
+        @if(Model != null){
+            @:No results for @Html.Raw(Model)
+        }
+    </div>
+</div>
