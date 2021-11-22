@@ -3,9 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vulnerable.MVC", "Vulnerable.MVC\Vulnerable.MVC.csproj", "{3DCB86E3-43E0-4602-8B50-6A69B19525ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vulnerable.MVC", "Vulnerable.MVC\Vulnerable.MVC.csproj", "{3DCB86E3-43E0-4602-8B50-6A69B19525ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vulnerable.Common", "Vulnerable.Common\Vulnerable.Common.csproj", "{29703529-4042-41D6-8CF0-57844596884C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vulnerable.Common", "Vulnerable.Common\Vulnerable.Common.csproj", "{29703529-4042-41D6-8CF0-57844596884C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Protos", "Protos", "{8A62E695-DD7D-45EF-B1FC-C093B8ADB9D9}"
+	ProjectSection(SolutionItems) = preProject
+		Todo.proto = Todo.proto
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{F47F21EF-CE47-4FCD-B2E4-F192EE77BBC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{EC7A77B7-D1C3-4D77-BA21-148B0F731D91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +33,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3DCB86E3-43E0-4602-8B50-6A69B19525ED} = {F47F21EF-CE47-4FCD-B2E4-F192EE77BBC9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6E3A1534-EEFC-4D4D-9BE4-27B1A090B61C}

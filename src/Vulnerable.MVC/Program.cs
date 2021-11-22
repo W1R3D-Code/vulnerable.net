@@ -1,4 +1,19 @@
+using Microsoft.EntityFrameworkCore;
+using Vulnerable.MVC;
+using Vulnerable.MVC.Areas.Identity.Data;
+using Vulnerable.MVC.Data;
+
+
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("IdentityContextConnection");
+
+builder.Services.AddDbContext<IdentityContext>(options
+        => options.UseSqlite(connectionString)
+    );
+
+builder.Services.AddDefaultIdentity<User>(options 
+        => options.SignIn.RequireConfirmedAccount = false)
+    .AddEntityFrameworkStores<IdentityContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -16,7 +31,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
@@ -28,5 +43,9 @@ app.MapControllerRoute(
     pattern: "Search/{q}",
     new { controller = "Search", action = "Index" }
     );
+
+app.MapRazorPages();
+
+app.CreateAndMigrateDatabase();
 
 app.Run();

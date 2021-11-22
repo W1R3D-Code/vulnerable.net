@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option csharp_namespace = "Vulnerable.Notes";
+
+package notes;
+
+message getNoteParams{
+	string user = 1;
+}
+
+message addNoteParams {
+  string text = 1;
+  string user = 2;
+}
+
+message deleteNoteParams {
+  string id = 1;
+  string user = 2;
+}
+
+message noteObject {
+  string id = 1;
+  string user = 2;
+  string text = 3;
+}
+
+message noteResponse {
+  repeated noteObject notes = 1;
+}
+
+message deleteResponse {
+  string message = 1;
+}
+
+service noteService {
+  rpc addNote(addNoteParams) returns (noteObject) {}
+  rpc deleteNote(deleteNoteParams) returns (deleteResponse) {}
+  rpc getNotes(getNoteParams) returns (noteResponse) {}
+}
