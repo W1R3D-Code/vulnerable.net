@@ -1,0 +1,60 @@
+﻿@model Vulnerable.MVC.Models.UserAccountsViewModel
+
+@{
+    ViewData["Title"] = "Administration";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Administrator Homepage</h1>
+    <br />
+    <br />
+    <h3 class="display-7">Admin Accounts</h3>
+    @if (Model != null && Model.Admins.Any())
+    {
+        //  TODO:: Use partials
+        <table class="table table-sm table-hover table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var account in Model.Admins)
+                {
+                <tr>
+                    <td scope="row">@account.UserName</td>
+                    <td>@account.Email</td>
+                    <td>@account.PhoneNumber</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    }
+    <br />
+    <br />
+    <h3 class="display-7">User Accounts</h3>
+    @if (Model != null && Model.Users.Any())
+    {
+        <table class="table table-sm table-hover table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col" class=col-2>Username</th>
+                    <th scope="col" class=col-3>Email</th>
+                    <th scope="col" class=col-3>Phone Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var account in Model.Users)
+                {
+                <tr>
+                    <td scope="row">@account.UserName</td>
+                    <td>@account.Email</td>
+                    <td>@account.PhoneNumber</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

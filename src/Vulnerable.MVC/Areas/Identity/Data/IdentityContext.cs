@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Vulnerable.MVC.Areas.Identity.Data;
 
@@ -6,10 +7,12 @@ namespace Vulnerable.MVC.Data;
 
 public class IdentityContext : IdentityDbContext<User>
 {
-    public IdentityContext(DbContextOptions<IdentityContext> options)
+    private readonly IPasswordHasher<User> _passwordHasher;
+
+    public IdentityContext(DbContextOptions<IdentityContext> options, IPasswordHasher<User> passwordHasher)
         : base(options)
     {
-        
+        _passwordHasher = passwordHasher;
     }
 
     protected override void OnModelCreating(ModelBuilder builder)
